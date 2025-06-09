@@ -1,0 +1,150 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(201, 201, 201);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.weather-app {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    margin: 30px 0 20px 0;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-section input:focus {
+    border-color: #4a90e2;
+}
+
+.input-section button {
+    border: none;
+    background-color: #4a90e2;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background-color: #3a7bc8;
+}
+
+.input-section button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.weather-header {
+    margin-bottom: 20px;
+}
+
+.weather-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.weather-header p {
+    margin: 8px 0 0;
+    opacity: 0.8;
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.temperature-section {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.weather-description {
+    font-size: 18px;
+}
+
+.sunrise-sunset {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.item-details {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.detail-label {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.err-msg {
+    color: red;
+}

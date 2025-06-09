@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <style>
+        .on-btn {
+            background-color: rgb(25, 135, 84);
+        }
+
+        .off-btn {
+            background-color: rgb(220, 53, 69);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        /////////////////////////////////////////////////
+        /*
+        function Counter({ count, onClick }) {
+            return <button onClick={onClick}>Clicked {count} {count <= 1 ? "time" : "times"}</button>
+        }
+
+        function App() {
+            const [count, setCount] = React.useState(0);
+
+            function handleClick() {
+                setCount(count + 1)
+            }
+
+            return (
+                <>
+                    <Counter count={count} onClick={handleClick} />
+                    <Counter count={count} onClick={handleClick} />
+                    <button onClick={() => setCount(0)}>Reset</button>
+                </>
+            )
+        }
+        */
+
+        /////////////////////////////////////////////
+        /*
+        function TextBox() {
+            const [inputText, setInputText] = React.useState("");
+
+            const handleInputText = (e) => {
+                setInputText(e.target.value);
+            }
+
+            return (
+                <>
+                    <input type="text" placeholder="Enter your name..." value={inputText} onChange={handleInputText} />
+                    <p>Hello, {inputText}</p>
+                </>
+            )
+        }
+        */
+
+        ////////////////////////////////////////////
+        /*
+        function Button() {
+            const [isButtonOn, setIsButtonOn] = React.useState(true);
+
+            return <button
+                className={isButtonOn ? "on-btn" : "off-btn"}
+                onClick={() => {
+                    setIsButtonOn(!isButtonOn)
+                }}>{isButtonOn ? "ON" : "OFF"}
+            </button>
+        }
+        */
+
+        ////////////////////////////////////////////
+        /*
+        function Form() {
+            const [showPassword, setShowPassword] = React.useState(false);
+
+            return (
+                <>
+                    <input type={showPassword ? "text" : "password"} />
+                    <button
+                        onClick={() => setShowPassword(!showPassword)}
+                    >{showPassword ? "Hide" : "Show"}</button>
+                </>
+            )
+        }
+        */
+
+        ///////////////////////////////////////////
+        /*
+        function Clock() {
+            const [currentTime, setCurrentTime] = React.useState(dayjs().format('HH:mm:ss'));
+
+            React.useEffect(() => {
+                const intervalId = setInterval(() => {
+                    const currentTime = dayjs().format('HH:mm:ss');
+                    setCurrentTime(currentTime);
+                }, 1000);
+
+                return () => clearInterval(intervalId)
+            }, []);
+
+            return <p>Current Time: {currentTime}</p>
+        }
+        */
+
+        /////////////////////////////////////////
+        /*
+        function Counter() {
+            const [count, setCount] = React.useState(0);
+            const intervalRef = React.useRef(null); // store interval ID here
+
+            function handleAutoClick() {
+                if (intervalRef.current) return; // prevent multiple intervals
+
+                intervalRef.current = setInterval(() => {
+                    setCount(prev => prev + 1);
+                }, 1000);
+            }
+
+            function handleStop() {
+                if (intervalRef.current) {
+                    clearInterval(intervalRef.current);
+                    intervalRef.current = null;
+                }
+            }
+
+            // Cleanup when component unmounts
+            React.useEffect(() => {
+                return () => {
+                    if (intervalRef.current) {
+                        clearInterval(intervalRef.current);
+                    }
+                };
+            }, []);
+
+            return (
+                <>
+                    <button onClick={() => setCount(prev => prev + 1)}>
+                        Clicked {count} times
+                    </button>
+                    <button onClick={() => setCount(0)}>
+                        Reset
+                    </button>
+                    <button onClick={handleAutoClick}>
+                        Auto Click
+                    </button>
+                    <button onClick={handleStop}>
+                        Stop
+                    </button>
+                </>
+            );
+        }
+        */
+
+        //////////////////////////////////////////////
+        /*
+        function Chat() {
+            const [text, setText] = React.useState("");
+            const textRef = React.useRef(null);
+
+            function handleChange(e) {
+                setText(e.target.value);
+                textRef.current = e.target.value;
+            }
+
+            function handleClick() {
+                setTimeout(() => {
+                    alert(textRef.current)
+                }, 3000);
+            }
+
+            return (
+                <>
+                    <input value={text} onChange={handleChange} />
+                    <button onClick={handleClick}>Send</button>
+                </>
+            )
+        }
+        */
+
+        ////////////////////////////////////////////////////
+        /*
+        function CatFriends() {
+            const firstCatRef = React.useRef(null);
+            const secondCatRef = React.useRef(null);
+            const thirdCatRef = React.useRef(null);
+
+            const handleScrollToFirstCat = () => {
+                firstCatRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                })
+            }
+
+            const handleScrollToSecondCat = () => {
+                secondCatRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                })
+            }
+
+            const handleScrollToThirdCat = () => {
+                thirdCatRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                })
+            }
+
+            return (
+                <>
+                    <nav>
+                        <button onClick={handleScrollToFirstCat}>
+                            Neo
+                        </button>
+                        <button onClick={handleScrollToSecondCat}>
+                            Millie
+                        </button>
+                        <button onClick={handleScrollToThirdCat}>
+                            Bella
+                        </button>
+                    </nav>
+                    <div>
+                        <ul>
+                            <li>
+                                <img
+                                    src="https://placecats.com/neo/300/200"
+                                    alt="Neo"
+                                    ref={firstCatRef}
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="https://placecats.com/millie/200/200"
+                                    alt="Millie"
+                                    ref={secondCatRef}
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="https://placecats.com/bella/199/200"
+                                    alt="Bella"
+                                    ref={thirdCatRef}
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                </>
+            );
+        }
+        */
+
+        ///////////////////////////////////////////////
+        /*
+        const MyInput = React.forwardRef((props, ref) => {
+            return <input ref={ref} />
+        })
+
+        function MyForm() {
+            const inputRef = React.useRef(null);
+
+            return (
+                <>
+                    <MyInput ref={inputRef} />
+                    <button onClick={() => inputRef.current.focus()}>Focus on Input</button>
+                </>
+            )
+        }
+        */
+
+        ////////////////////////////////////////////////
+        // chat-room app
+        function createConnection(serverUrl, roomId) {
+            // A real implementation would actually connect to the server
+            return {
+                connect() {
+                    console.log(`✅ Connecting to "${roomId}" room at ${serverUrl}...`);
+                },
+                disconnect() {
+                    console.log(`❌ Disconnected from "${roomId}" room at ${serverUrl}`);
+                }
+            };
+        }
+
+        function ChatRoom({ roomId }) {
+            const [serverUrl, setServerUrl] = React.useState('https://localhost:1234');
+
+            React.useEffect(() => {
+                const connection = createConnection(serverUrl, roomId);
+                connection.connect();
+                return () => {
+                    connection.disconnect();
+                };
+            }, [roomId, serverUrl]);
+
+            return (
+                <>
+                    <label>
+                        Server URL:{' '}
+                        <input
+                            value={serverUrl}
+                            onChange={e => setServerUrl(e.target.value)}
+                        />
+                    </label>
+                    <h1>Welcome to the {roomId} room!</h1>
+                </>
+            );
+        }
+
+        function App() {
+            const [roomId, setRoomId] = React.useState('general');
+            const [show, setShow] = React.useState(false);
+            return (
+                <>
+                    <label>
+                        Choose the chat room:{' '}
+                        <select
+                            value={roomId}
+                            onChange={e => setRoomId(e.target.value)}
+                        >
+                            <option value="general">general</option>
+                            <option value="travel">travel</option>
+                            <option value="music">music</option>
+                        </select>
+                    </label>
+                    <button onClick={() => setShow(!show)}>
+                        {show ? 'Close chat' : 'Open chat'}
+                    </button>
+                    {show && <hr />}
+                    {show && <ChatRoom roomId={roomId} />}
+                </>
+            );
+        }
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App />);
+
+    </script>
+</body>
+
+</html>
