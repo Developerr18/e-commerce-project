@@ -3,7 +3,7 @@ import { formatMoney } from "../../utils/money";
 import axios from "axios";
 import checkmarkIcon from "../../assets/images/icons/checkmark.png";
 
-export default function Product({ product, fetchCartData }) {
+export default function Product({ product, loadCart }) {
     const [quantity, setQuantity] = useState(1);
 
     const addToCart = async () => {
@@ -11,7 +11,7 @@ export default function Product({ product, fetchCartData }) {
             productId: product.id,
             quantity,
         });
-        await fetchCartData();
+        await loadCart();
     };
 
     const selectQuantity = (e) => {
