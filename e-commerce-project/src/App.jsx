@@ -11,19 +11,28 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
     const [cart, setCart] = useState([]);
 
+    const fetchCartData = async () => {
+        const response = await axios.get("/api/cart-items?expand=product");
+        setCart(response.data);
+    };
+
     useEffect(() => {
-        axios
-            .get("/api/cart-items?expand=product")
-            .then((response) => setCart(response.data));
+        fetchCartData();
     }, []);
 
     return (
         <Routes>
-            <Route index element={<HomePage cart={cart} />} />
+            <Route
+                index
+                element={<HomePage cart={cart} fetchCartData={fetchCartData} />}
+            />
             <Route path="checkout" element={<CheckoutPage cart={cart} />} />
             <Route path="orders" element={<OrdersPage cart={cart} />} />
-            <Route path="tracking" element={<TrackingPage />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route
+                path="tracking/:orderId/:productId"
+                element={<TrackingPage cart={cart} />}
+            />
+            <Route path="*" element={<ErrorPage cart={cart} />} />
         </Routes>
     );
 }

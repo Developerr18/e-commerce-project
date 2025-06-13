@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 
-export default function ErrorPage() {
+export default function ErrorPage({ cart }) {
     return (
         <>
-            <Header />
+            <Header cart={cart} />
             <h2 className="not-found-page">Page not found</h2>
         </>
     );
