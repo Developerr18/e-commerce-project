@@ -1,7 +1,12 @@
+import AboutSection from "./AboutSection";
 import "./App.css";
+import Sidebar from "./Sidebar";
 
-function App() {
-    return <h1>hello world!</h1>;
+export default function App() {
+    return (
+        <div className="portfolio-container">
+            <Sidebar />
+            <AboutSection />
+        </div>
+    );
 }
-
-export default App;

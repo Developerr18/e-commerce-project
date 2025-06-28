@@ -1,0 +1,81 @@
+.about .yellow-line {
+    background-color: rgb(255, 179, 0);
+    height: 5px;
+    width: 44px;
+    border-radius: 10px;
+    margin: 8px 0 30px 0;
+}
+
+.icon {
+    background-color: rgb(24, 24, 24);
+    padding: 10px 15px;
+    color: rgb(255, 211, 15);
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about p {
+    margin: 15px 0;
+}
+
+.about h2 {
+    margin-top: 40px;
+}
+
+.service {
+    margin-bottom: 35px;
+}
+
+.service-title {
+    margin-bottom: 20px;
+}
+
+.h2 {
+    margin-top: 50px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.service-item-title {
+    font-size: 18px;
+}
+
+.service-item-text {
+    font-size: 16px;
+    margin-top: 5px;
+    color: rgb(217, 217, 217);
+}
+
+@media (max-width: 1000px) {
+    .service-item .icon {
+        background-color: rgb(24, 24, 24);
+        padding: 10px 15px;
+        color: rgb(255, 211, 15);
+        height: 48px;
+        width: 48px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
