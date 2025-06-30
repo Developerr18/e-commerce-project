@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "create-vite": "^6.5.0"
+    "create-vite": "^7.0.0"
   }
 }

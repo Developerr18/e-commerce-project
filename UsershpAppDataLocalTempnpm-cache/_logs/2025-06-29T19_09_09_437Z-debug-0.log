@@ -1,0 +1,50 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.0
+2 info using node@v22.16.0
+3 silly config load:file:C:\Users\hp\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\hp\Desktop\Web-dev\React-SSD\.npmrc
+5 silly config load:file:C:\Users\hp\.npmrc
+6 silly config load:file:C:\Users\hp\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm create vite@latest
+8 verbose argv "create" "vite@latest"
+9 verbose logfile logs-max:10 dir:C:\Users\hp\Desktop\Web-dev\React-SSD\UsershpAppDataLocalTempnpm-cache\_logs\2025-06-29T19_09_09_437Z-
+10 verbose logfile C:\Users\hp\Desktop\Web-dev\React-SSD\UsershpAppDataLocalTempnpm-cache\_logs\2025-06-29T19_09_09_437Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 http fetch GET 200 https://registry.npmjs.org/create-vite 1330ms (cache revalidated)
+14 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+15 silly idealTree buildDeps
+16 silly fetch manifest create-vite@7.0.0
+17 silly packumentCache full:https://registry.npmjs.org/create-vite cache-miss
+18 http fetch GET 200 https://registry.npmjs.org/create-vite 171ms (cache revalidated)
+19 silly packumentCache full:https://registry.npmjs.org/create-vite set size:189680 disposed:false
+20 silly placeDep ROOT create-vite@7.0.0 REPLACE for:  want: 7.0.0
+21 silly reify mark retired [
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\create-vite',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite.cmd',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite.ps1',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva.cmd',
+21 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva.ps1'
+21 silly reify ]
+22 silly reify moves {
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\create-vite': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.create-vite-P4xui29D',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.create-vite-oNWcF0SN',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite.cmd': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.create-vite.cmd-2GsTAhJT',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\create-vite.ps1': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.create-vite.ps1-zva80m8p',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.cva-n5HNTgNN',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva.cmd': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.cva.cmd-03Zv2uoi',
+22 silly reify   'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\cva.ps1': 'C:\\Users\\hp\\Desktop\\Web-dev\\React-SSD\\UsershpAppDataLocalTempnpm-cache\\_npx\\1415fee72ff6294b\\node_modules\\.bin\\.cva.ps1-ZflXe56G'
+22 silly reify }
+23 silly audit bulk request { 'create-vite': [ '7.0.0' ] }
+24 silly tarball no local data for create-vite@https://registry.npmjs.org/create-vite/-/create-vite-7.0.0.tgz. Extracting by manifest.
+25 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 416ms
+26 silly audit report {}
+27 http fetch GET 200 https://registry.npmjs.org/create-vite/-/create-vite-7.0.0.tgz 1117ms (cache miss)
+28 verbose cwd C:\Users\hp\Desktop\Web-dev\React-SSD
+29 verbose os Windows_NT 10.0.26100
+30 verbose node v22.16.0
+31 verbose npm  v10.9.0
+32 verbose exit 0
+33 info ok
