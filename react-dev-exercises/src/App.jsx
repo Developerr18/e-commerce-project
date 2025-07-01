@@ -1,5 +1,5 @@
-import Form from "./UpdatingObject/object";
+import BucketList from "./UpdatingArray/Arrays";
 
 export default function App() {
-    return <Form />;
+    return <BucketList />;
 }
