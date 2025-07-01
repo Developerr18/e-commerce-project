@@ -1,3 +1,3 @@
 export default function Array() {
-    return;
+    return <h1></h1>;
 }
