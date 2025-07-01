@@ -1,1 +1,3 @@
-export default function Array() {}
+export default function Array() {
+    return;
+}
