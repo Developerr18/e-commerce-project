@@ -104,7 +104,6 @@ export default function EditProfile() {
                 )}
             </label>
             <br />
-            <br />
             <button type="submit">{isEditing ? "Save" : "Edit"} Profile</button>
             <p>
                 <i>
