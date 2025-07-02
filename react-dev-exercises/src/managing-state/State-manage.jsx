@@ -103,7 +103,6 @@ export default function EditProfile() {
                     <b>{lastName}</b>
                 )}
             </label>
-            <h1></h1>
             <br />
             <button type="submit">{isEditing ? "Save" : "Edit"} Profile</button>
             <p>
