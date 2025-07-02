@@ -1,4 +1,3 @@
-/*
 import { useState } from "react";
 
 export default function Form() {
@@ -90,10 +89,8 @@ export default function Form() {
         </>
     );
 }
-*/
 
 /////////////////////////////////////////////
-/*
 import { useImmer } from "use-immer";
 
 export default function Form() {
@@ -172,10 +169,8 @@ export default function Form() {
         </>
     );
 }
-*/
 
 ////////////////////////////////////////////////
-/*
 import { useState } from "react";
 
 const initialPosition = {
@@ -299,7 +294,6 @@ function Background({ position }) {
         />
     );
 }
-*/
 
 ///////////////////////////////////////////////
 import { useState } from "react";
