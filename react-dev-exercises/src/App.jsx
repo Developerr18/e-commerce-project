@@ -1,6 +1,5 @@
-import Form from "./managing-state/State-manage";
-import BucketList from "./UpdatingArray/Arrays";
+import Messenger from "./managing-state/use-reducer/reducer";
 
 export default function App() {
-    return <Form />;
+    return <Messenger />;
 }
