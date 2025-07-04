@@ -415,7 +415,7 @@ const letters = [
 */
 
 //////////////////////////////////////////////////
-
+/*
 export default function MailClient() {
     const [selectedIds, setSelectedIds] = useState([]);
 
@@ -487,3 +487,105 @@ const letters = [
         isStarred: false,
     },
 ];
+*/
+
+/////////////////////////////////////////////////
+/*
+export default function ChatApp() {
+    const [selectedContactId, setSelectedContactId] = useState(0);
+    const selectedContact = contacts.find(
+        (contact) => contact.id === selectedContactId
+    );
+
+    return (
+        <>
+            <ContactList
+                contacts={contacts}
+                onSelect={(id) => setSelectedContactId(id)}
+            />
+            <Chat key={selectedContact.id} contact={selectedContact} />
+        </>
+    );
+}
+
+function ContactList({ contacts, onSelect }) {
+    return (
+        <section>
+            <ul>
+                {contacts.map((contact) => (
+                    <li key={contact.id}>
+                        <button onClick={() => onSelect(contact.id)}>
+                            {contact.name}
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
+}
+
+function Chat({ contact }) {
+    return (
+        <section>
+            <textarea placeholder={`Chat to ${contact.name}`} />
+            <br />
+            <button>send to {contact.email}</button>
+        </section>
+    );
+}
+
+const contacts = [
+    { id: 0, name: "Taylor", email: "taylor@mail.com" },
+    { id: 1, name: "Alice", email: "alice@mail.com" },
+    { id: 2, name: "Bob", email: "bob@mail.com" },
+];
+*/
+
+///////////////////////////////////////////////
+
+export default function App() {
+    const [reverse, setReverse] = useState(false);
+    let checkbox = (
+        <label>
+            <input
+                type="checkbox"
+                checked={reverse}
+                onChange={(e) => setReverse(e.target.checked)}
+            />
+            Reverse order
+        </label>
+    );
+    if (reverse) {
+        return (
+            <>
+                <Field label="Last name" />
+                <Field label="First name" />
+                {checkbox}
+            </>
+        );
+    } else {
+        return (
+            <>
+                <Field label="First name" />
+                <Field label="Last name" />
+                {checkbox}
+            </>
+        );
+    }
+}
+
+function Field({ label }) {
+    const [text, setText] = useState("");
+    return (
+        <label>
+            {label}:{" "}
+            <input
+                type="text"
+                value={text}
+                placeholder={label}
+                onChange={(e) => setText(e.target.value)}
+            />
+            <br />
+        </label>
+    );
+}
