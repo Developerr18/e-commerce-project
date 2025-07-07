@@ -1,5 +1,5 @@
-import Messenger from "./managing-state/use-reducer/reducer";
+import Homepage from "./react-router/Homepage";
 
 export default function App() {
-    return <Messenger />;
+    return <Homepage />;
 }
