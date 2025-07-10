@@ -41,5 +41,3 @@ function useAutoScroll(dependencies) {
 
     return containerRef;
 }
-
-<h1></h1>;
