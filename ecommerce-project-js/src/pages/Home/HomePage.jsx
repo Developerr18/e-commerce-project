@@ -28,6 +28,7 @@ export default function HomePage({ cart, loadCart }) {
             <title>Ecommerce Project</title>
 
             <Header cart={cart} />
+            <h1>hello world</h1>
 
             <div className="home-page">
                 <ProductsGrid products={products} loadCart={loadCart} />
