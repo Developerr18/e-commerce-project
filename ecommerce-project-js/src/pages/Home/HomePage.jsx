@@ -18,7 +18,6 @@ export default function HomePage({ cart, loadCart }) {
             const response = await axios.get(urlPath);
             setProducts(response.data);
         };
-
         getHomeProductsData();
     }, [search]);
 
@@ -28,7 +27,6 @@ export default function HomePage({ cart, loadCart }) {
             <title>Ecommerce Project</title>
 
             <Header cart={cart} />
-            <h1>hello world</h1>
 
             <div className="home-page">
                 <ProductsGrid products={products} loadCart={loadCart} />
